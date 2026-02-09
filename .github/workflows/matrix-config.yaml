@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
-        images: [hello-world, alping]
+        images: [hello-world, alpine]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Docker info on ${{ matrix.os }}

@@ -1,30 +1,30 @@
-name: Demo Action
+# name: Demo Action
 
-on: push
+# on: push
 
-jobs:
-    first_job:
-        runs-on: ubuntu-latest
-        steps:
-        - name: checkout repo
-          uses: actions/checkout@v4  
+# jobs:
+#     first_job:
+#         runs-on: ubuntu-latest
+#         steps:
+#         - name: checkout repo
+#           uses: actions/checkout@v4  
         
-        - name: list and read file
-          run: | 
-            echo "My demo action!"
-            ls -ltra
-            cat README.md
+#         - name: list and read file
+#           run: | 
+#             echo "My demo action!"
+#             ls -ltra
+#             cat README.md
 
-        - name: Generate artwork
-          run: |
-            sudo apt install cowsay -y
-            cowsay -f dragon "Run IDIOT....!" > dragon.txt
+#         - name: Generate artwork
+#           run: |
+#             sudo apt install cowsay -y
+#             cowsay -f dragon "Run IDIOT....!" > dragon.txt
 
-        - name: check if file exists
-          run: ls dragon.txt
+#         - name: check if file exists
+#           run: ls dragon.txt
 
-        - name: read file
-          run: cat dragon.txt
+#         - name: read file
+#           run: cat dragon.txt
 
-        - name: list files
-          run: ls -ltra
+#         - name: list files
+#           run: ls -ltra

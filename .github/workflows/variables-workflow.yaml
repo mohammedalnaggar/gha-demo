@@ -1,0 +1,31 @@
+name: Variables Demo
+
+on: push 
+
+env:
+  var: value-from-WORKFLOW-level
+
+jobs:
+  job_1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: test var from step level
+        env: 
+          var: value-from-step-level
+        run: echo $var
+  job_2:
+    runs-on: ubuntu-latest
+    env:
+      var: value-from-job-level
+
+    steps:
+      - name: test var from job level
+        run: echo $var
+
+  job_3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test var from workflow level
+        run: echo $var
+

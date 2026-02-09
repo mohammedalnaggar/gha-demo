@@ -18,3 +18,4 @@ jobs:
       steps:
         - name: Sleep loong for 600s
           run: sleep 600
+          timeout-minutes: 1

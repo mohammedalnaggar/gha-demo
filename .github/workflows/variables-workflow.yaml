@@ -29,3 +29,9 @@ jobs:
       - name: test var from workflow level
         run: echo $var
 
+      - name: Access the secret from GITHUB
+        run: echo ${{ secrets.SECRET_1 }}
+
+      - name: Access the env var from github
+        run: echo ${{ vars.VAR }}
+

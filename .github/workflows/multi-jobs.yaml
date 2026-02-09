@@ -20,6 +20,12 @@ jobs:
           run: |
             sudo apt install cowsay -y
             cowsay -f dragon "Run IDIOT....!" > dragon.txt
+         
+        - name: Upload the dragon file
+          uses: actions/upload-artifact@v3
+          with: 
+            name: dragon-file
+            path: dragon.txt
 
             
             
@@ -30,10 +36,22 @@ jobs:
         steps:
             - name: test
               run: echo "from test job"
+
+            - name: Download Dragon file
+              uses: actions/download-artifact@v3
+              with:
+                name: dragon-file
+            
+            - name: test file exists
+              run: cat dragon.txt
         
     deploy_job_3:
         runs-on: ubuntu-latest
         needs: [ test_job_2]
+        
         steps:
         - name: test deploy
           run: echo "deploy step"
+
+        - name: test file exists
+          run: cat dragon.txt

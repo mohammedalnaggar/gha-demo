@@ -1,6 +1,6 @@
 name: Variables Demo
 
-on: push 
+on: push
 
 env:
   var: value-from-WORKFLOW-level

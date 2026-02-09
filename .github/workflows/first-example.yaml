@@ -1,0 +1,16 @@
+name: Demo Action
+
+on: push
+
+jobs:
+    first_job:
+        runs-on: ubutntu-latest
+        steps: 
+        - name: welcome message
+          run: echo "My demo action!"
+
+        - name: lsit files
+          run: ls
+
+        - name: read file
+          run: cat README.md

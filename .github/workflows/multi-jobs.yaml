@@ -1,7 +1,6 @@
 name: Multi-Job Workflow
 
-on: 
-  push
+on: push
 
 jobs:
     build_job_1:

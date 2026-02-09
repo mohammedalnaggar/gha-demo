@@ -22,9 +22,5 @@ jobs:
 
         - name: check if file exists
           run: ls dragon.txt
-
         - name: read file
           run: cat dragon.txt
-
-        - name: list files
-          run: ls -ltra

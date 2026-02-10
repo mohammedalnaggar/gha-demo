@@ -1,23 +1,23 @@
-name: Workflow Filters Demo
+# name: Workflow Filters Demo
 
-on: 
-  workflow_dispatch:
-  pull_request:
-    branches:
-      - main    # this workflow will only run for pull requests targeting the main branch
+# on: 
+#   workflow_dispatch:
+#   pull_request:
+#     branches:
+#       - main    # this workflow will only run for pull requests targeting the main branch
 
-    types:
-        - opened
-        - closed
-  push:
-    branches:
-      - main
-      - "!feature/*"
+#     types:
+#         - opened
+#         - closed
+#   push:
+#     branches:
+#       - main
+#       - "!feature/*"
 
-jobs:
-    filters_demo:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Show github context
-              run: |
-                echo this workflow is executed for event type - ${{ github.event_name }}
+# jobs:
+#     filters_demo:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: Show github context
+#               run: |
+#                 echo this workflow is executed for event type - ${{ github.event_name }}

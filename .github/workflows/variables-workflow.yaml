@@ -4,6 +4,7 @@ on:
   # schedule:
   #   - cron: "*/1 * * * "
   workflow_dispatch:
+  push:
 
 env:
   var: value-from-WORKFLOW-level
@@ -27,6 +28,7 @@ jobs:
         run: echo $var
 
   job_3:
+    if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
       - name: test var from workflow level

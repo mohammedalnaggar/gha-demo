@@ -1,26 +1,26 @@
-name: Context Access Demo
+# name: Context Access Demo
 
 
-on:
-    workflow_dispatch:
+# on:
+#     workflow_dispatch:
 
-jobs:
-    context_demo:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Show github context
-              run: |
-                echo "github context: ${{ toJson(github) }}"
-            - name: Show env context
-              run: |
-                echo "env context: ${{ toJson(env) }}"
-            - name: Show job context    
-              run: |
-                echo "job context: ${{ toJson(job) }}"
-            - name: Show steps context
-              run: |
-                echo "steps context: ${{ toJson(steps) }}"
-            - name: access a var 
-              run: echo ${{ vars.VAR }}
-            - name: access VARS context
-              run: echo "VARS context ${{ toJson(vars) }}"
+# jobs:
+#     context_demo:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: Show github context
+#               run: |
+#                 echo "github context: ${{ toJson(github) }}"
+#             - name: Show env context
+#               run: |
+#                 echo "env context: ${{ toJson(env) }}"
+#             - name: Show job context    
+#               run: |
+#                 echo "job context: ${{ toJson(job) }}"
+#             - name: Show steps context
+#               run: |
+#                 echo "steps context: ${{ toJson(steps) }}"
+#             - name: access a var 
+#               run: echo ${{ vars.VAR }}
+#             - name: access VARS context
+#               run: echo "VARS context ${{ toJson(vars) }}"

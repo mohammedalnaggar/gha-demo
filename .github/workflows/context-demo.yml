@@ -22,3 +22,5 @@ jobs:
                 echo "steps context: ${{ toJson(steps) }}"
             - name: access a var 
               run: echo ${{ vars.VAR }}
+            - name: access VARS context
+              run: echo "VARS context: ${{ toJson(vars) }}"
